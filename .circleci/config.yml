@@ -8,7 +8,7 @@ workflows:
           context:
             - dummy-helm
           cluster-name: my-cluster
-          enable-cluster-wide-admin-access: true
+          enable-cluster-wide-admin-access: false
       - aws-eks/install-helm-chart:
           context:
             - dummy-helm
