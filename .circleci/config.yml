@@ -3,13 +3,14 @@ orbs:
 version: 2.1
 jobs:
  helm-chart-deploy:
-  - checkout
-  - aws-eks/install-helm-chart:
-      context:
-        - dummy-helm
-      chart: stable/kong
-      cluster-name: my-cluster
-      release-name: dummy-app-release
+  steps: 
+    - checkout
+    - aws-eks/install-helm-chart:
+        context:
+          - dummy-helm
+        chart: stable/kong
+        cluster-name: my-cluster
+        release-name: dummy-app-release
 
 workflows:
   deployment:
