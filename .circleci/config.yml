@@ -77,6 +77,7 @@ workflows:
           context: dummy-helm
           cluster-name: my-cluster
           aws-region: $AWS_DEFAULT_REGION
+          watch-rollout-status: false
       # - test-application:
       #     name: test-application
       #     cluster-name: my-cluster
