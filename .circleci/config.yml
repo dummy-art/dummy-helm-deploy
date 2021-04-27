@@ -7,6 +7,6 @@ workflows:
       - aws-eks/install-helm-chart:
           context:
             - dummy-helm
-          chart: stable/grafana
+          chart: ./dummy-app
           cluster-name: my-cluster
-          release-name: grafana-release
+          release-name: dummy-app-release
