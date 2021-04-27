@@ -4,10 +4,9 @@ version: 2.1
 workflows:
   deployment:
     jobs:
-      - checkout
       - aws-eks/install-helm-chart:
           context:
             - dummy-helm
-          chart: dummy-app
+          chart: stable/kong
           cluster-name: my-cluster
           release-name: dummy-app-release
