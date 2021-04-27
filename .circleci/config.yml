@@ -70,7 +70,6 @@ workflows:
       - deploy-application:
           cluster-name: my-cluster
           aws-region: $AWS_DEFAULT_REGION
-          version-info: "${CIRCLE_SHA1}"
       # - test-application:
       #     name: test-application
       #     cluster-name: my-cluster
