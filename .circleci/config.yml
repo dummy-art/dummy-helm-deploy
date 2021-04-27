@@ -4,6 +4,7 @@ version: 2.1
 workflows:
   deployment:
     jobs:
+      - checkout
       - aws-eks/install-helm-chart:
           context:
             - dummy-helm
