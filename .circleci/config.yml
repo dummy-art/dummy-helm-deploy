@@ -5,6 +5,7 @@ workflows:
   deployment:
     jobs:
       - aws-eks/install-helm-chart:
+          context: dummy-helm
           chart: ./chart/dummy-app
           cluster-name: my-cluster
           release-name: dummy-app-release
