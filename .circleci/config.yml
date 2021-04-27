@@ -7,13 +7,13 @@ workflows:
       - aws-eks/install-helm-on-cluster:
           context:
             - dummy
-          cluster-name: my-eks-helm-demo
+          cluster-name: my-cluster
           enable-cluster-wide-admin-access: true
       - aws-eks/install-helm-chart:
           context:
             - dummy
           chart: stable/grafana
-          cluster-name: my-eks-helm-demo
+          cluster-name: my-cluster
           release-name: grafana-release
           requires:
             - aws-eks/install-helm-on-cluster
