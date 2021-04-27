@@ -4,12 +4,12 @@ version: 2.1
 workflows:
   deployment:
     jobs:
-      - aws-eks/install-helm-on-cluster:
-          context:
-            - dummy-helm
-          cluster-name: my-cluster
-          enable-cluster-wide-admin-access: true
-          wait: false
+      # - aws-eks/install-helm-on-cluster:
+      #     context:
+      #       - dummy-helm
+      #     cluster-name: my-cluster
+      #     enable-cluster-wide-admin-access: false
+      #     wait: false
       - aws-eks/install-helm-chart:
           context:
             - dummy-helm
