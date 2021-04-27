@@ -1,18 +1,10 @@
 orbs:
-  aws-eks: circleci/aws-eks@1.1.0
+  aws-eks: circleci/aws-eks@0.2.3
 version: 2.1
-jobs:
- helm-chart-deploy:
-  steps: 
-    - checkout
-    - aws-eks/install-helm-chart:
-        context:
-          - dummy-helm
-        chart: stable/kong
-        cluster-name: my-cluster
-        release-name: dummy-app-release
-
 workflows:
   deployment:
     jobs:
-      - helm-chart-deploy
+      - aws-eks/install-helm-chart:
+          chart: ./chart/dummy-app
+          cluster-name: my-cluster
+          release-name: dummy-app-release
