@@ -32,7 +32,6 @@ jobs:
           aws-region: << parameters.aws-region >>
       - kubernetes/create-or-update-resource:
           resource-file-path: "deployment/deployment.yaml"
-          get-rollout-status: true
           watch-rollout-status: false
       # - kubernetes/create-or-update-resource:
       #     resource-file-path: "/home/circleci/project/dummy-helm-deploy/deployment/demo-app-service.yaml"
