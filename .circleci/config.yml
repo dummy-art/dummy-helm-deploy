@@ -6,12 +6,12 @@ workflows:
     jobs:
       - aws-eks/install-helm-on-cluster:
           context:
-            - dummy
+            - dummy-helm
           cluster-name: my-cluster
           enable-cluster-wide-admin-access: true
       - aws-eks/install-helm-chart:
           context:
-            - dummy
+            - dummy-helm
           chart: stable/grafana
           cluster-name: my-cluster
           release-name: grafana-release
