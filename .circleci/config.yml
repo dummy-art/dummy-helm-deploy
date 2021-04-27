@@ -68,6 +68,7 @@ workflows:
   deployment:
     jobs:
       - deploy-application:
+          context: dummy-helm
           cluster-name: my-cluster
           aws-region: $AWS_DEFAULT_REGION
       # - test-application:
