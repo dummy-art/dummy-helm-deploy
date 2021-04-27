@@ -25,10 +25,10 @@ jobs:
           install-kubectl: true
           aws-region: << parameters.aws-region >>
       - kubernetes/create-or-update-resource:
-          resource-file-path: "deployment/deployment.yaml"
+          resource-file-path: "/home/circleci/project/dummy-helm-deploy/deployment/demo-app-service.yaml"
           get-rollout-status: true
       # - kubernetes/create-or-update-resource:
-      #     resource-file-path: "deployment/demo-app-service.yaml"
+      #     resource-file-path: "/home/circleci/project/dummy-helm-deploy/deployment/demo-app-service.yaml"
   test-application:
     executor: aws-eks/python3
     parameters:
