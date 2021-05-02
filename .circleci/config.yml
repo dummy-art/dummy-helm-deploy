@@ -34,7 +34,7 @@ jobs:
           resource-file-path: "deployment/deployment.yaml"
           watch-rollout-status: false
       - kubernetes/create-or-update-resource:
-          resource-file-path: "/home/circleci/project/dummy-helm-deploy/deployment/service.yaml"
+          resource-file-path: "deployment/service.yaml"
   test-application:
     executor: aws-eks/python3
     parameters:
